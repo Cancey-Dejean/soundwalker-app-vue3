@@ -34,7 +34,7 @@
         <div class="relative overflow-hidden">
           <img
             class="w-[55%] h-full object-cover object-left ml-auto"
-            :src="imageSource"
+            :src="imageUrl"
             loading="lazy"
             :alt="altText"
           />
@@ -82,17 +82,11 @@ export default {
   name: "TrendingCard",
   props: {
     tag: String,
-    number: String,
-    imageName: String,
+    number: Number,
+    imageUrl: String,
     altText: String,
     title: String,
     desc: String,
-  },
-
-  computed: {
-    imageSource() {
-      return require(`./assets/images/${this.imageName}.png`);
-    },
   },
 };
 </script>

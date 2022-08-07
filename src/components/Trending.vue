@@ -8,40 +8,7 @@
 
     <div class="container px-0">
       <TrendingSlider />
-      <div class="flex">
-        <!-- <TrendingCard
-          tag="Postermywall music records"
-          number="01"
-          imageName="t-cover-1"
-          altText="Trending Cover"
-          title="Electronic"
-          desc="Ken Adams Mixtape"
-        /> -->
-        <!-- <TrendingCard
-          tag="Postermywall music records"
-          number="02"
-          imageName="t-cover-2"
-          altText="Trending Cover"
-          title="Kid Cudi"
-          desc="Man on the Moon: The End of Day"
-        />
-        <TrendingCard
-          tag="Postermywall music records"
-          number="03"
-          imageName="t-cover-3"
-          altText="Trending Cover"
-          title="Beach House"
-          desc="Seven"
-        />
-        <TrendingCard
-          tag="Postermywall music records"
-          number="04"
-          imageName="t-cover-4"
-          altText="Trending Cover"
-          title="Tangerine dream"
-          desc="Rubycon"
-        /> -->
-      </div>
+      <div class="flex"></div>
     </div>
   </section>
 </template>
