@@ -13,19 +13,36 @@
       transition-all
       duration-[.6s]
       overflow-hidden
+      hover:shadow-[0_35px_56px_rgba(98,60,234,0.1)]
+      z-[1]
     "
   >
     <div class="relative z-[2]">
       <!-- Top -->
-      <div class="relative z-[2] flex gap-x-[30px]">
+      <div class="relative z-[2] flex gap-x-[30px] mb-[50px]">
         <div class="relative w-[50%]">
           <p
-            class="absolute top-[33px] left-0 text-[12px] uppercase text-title"
+            class="
+              absolute
+              z-[1]
+              top-[33px]
+              left-0
+              text-[12px]
+              uppercase
+              text-title
+            "
           >
             {{ tag }}
           </p>
           <div
-            class="text-[314px] leading-[1] font-title text-primary opacity-16"
+            class="
+              text-[250px]
+              leading-[1]
+              font-title
+              text-primary
+              opacity-7
+              font-normal
+            "
           >
             {{ number }}
           </div>
@@ -42,23 +59,67 @@
       </div>
 
       <!-- Text -->
-      <div class="relative z-[2]">
-        <h4>{{ title }}</h4>
-        <p>{{ desc }}</p>
+      <div class="relative z-[2] mb-[40px]">
+        <h4
+          class="
+            font-title
+            italic
+            text-[2rem]
+            leading-4
+            tracking-[1px]
+            text-title
+            mb-5
+          "
+        >
+          {{ title }}
+        </h4>
+
+        <p class="font-body max-w-[250px] text-title">{{ desc }}</p>
       </div>
 
       <!-- PlayShare -->
       <div
-        class="relative z-[2] flex items-center justify-between gap-x-[30px]"
+        class="
+          relative
+          z-[2]
+          flex
+          items-center
+          justify-between
+          gap-x-[30px]
+          pb-[30px]
+          pr-[30px]
+          font-title font-[300]
+          uppercase
+          text-[20px]
+          tracking-[2px]
+          leading-4
+          opacity-0
+          transition-all
+          duration-[.3s]
+          ease-in-out
+          group-hover:opacity-100 group-hover:delay-[.3s]
+        "
       >
         <button
           type="button"
-          class="flex items-center gap-x-[15px] max-w-[65px]"
+          class="
+            flex
+            items-center
+            gap-x-[15px]
+            max-w-[65px]
+            uppercase
+            tracking-[2px]
+          "
         >
-          Listen <img src="./assets/images/trend-play.svg" alt="" />
+          <span class="pt-[5px]">Listen</span>
+          <img
+            class="max-w-[10px]"
+            src="../../assets/images/trend-play.svg"
+            alt=""
+          />
         </button>
 
-        <a href="#">Share</a>
+        <a href="#" class="pt-[5px]">Share</a>
       </div>
     </div>
 
@@ -70,8 +131,13 @@
         z-[2]
         h-[3px]
         bg-primary
-        max-w-[417px]
+        max-w-[0]
         w-full
+        opacity-0
+        group-hover:opacity-100
+        group-hover:max-w-[417px]
+        group-hover:transition-ease-in-out
+        group-hover:duration-[1s]
       "
     ></div>
   </div>
@@ -82,7 +148,7 @@ export default {
   name: "TrendingCard",
   props: {
     tag: String,
-    number: Number,
+    number: String,
     imageUrl: String,
     altText: String,
     title: String,

@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       opacity: {
         16: ".16",
+        7: ".07",
       },
       backgroundImage: {
         "card-hover": "linear-gradient(#EFEBFF, #EFEBFF)",

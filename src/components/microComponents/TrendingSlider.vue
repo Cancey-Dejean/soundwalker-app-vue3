@@ -1,5 +1,32 @@
 <template>
   <div>
+    <h2
+      class="
+        text-center
+        italic
+        font-title
+        text-[42px] text-title
+        uppercase
+        tracking-[4px]
+        font-[200]
+      "
+    >
+      Hear what’s trending in the Soundwalker community
+    </h2>
+    <div class="flex justify-between gap-[40px]">
+      <div v-for="item in CardItems" :key="item.id">
+        <TrendingCard
+          :tag="item.tag"
+          :number="item.number"
+          :imageUrl="item.imageUrl"
+          :altText="item.altText"
+          :title="item.title"
+          :desc="item.desc"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- <div>
     <swiper
       class="cursor-pointer"
       :modules="modules"
@@ -65,7 +92,7 @@
         </svg>
       </button>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -114,16 +141,16 @@ export default {
           title: "Beach House",
           desc: "Seven",
         },
-        {
-          id: 4,
-          tag: "Postermywall music records",
-          number: "04",
-          imageUrl:
-            "https://cdn.shopify.com/s/files/1/0517/8146/8354/files/t-cover-4.png?v=1659728793",
-          altText: "Trending Cover",
-          title: "Tangerine dream",
-          desc: "Rubycon",
-        },
+        // {
+        //   id: 4,
+        //   tag: "Postermywall music records",
+        //   number: "04",
+        //   imageUrl:
+        //     "https://cdn.shopify.com/s/files/1/0517/8146/8354/files/t-cover-4.png?v=1659728793",
+        //   altText: "Trending Cover",
+        //   title: "Tangerine dream",
+        //   desc: "Rubycon",
+        // },
       ],
     };
   },

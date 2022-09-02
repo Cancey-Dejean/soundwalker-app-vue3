@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container px-0">
+    <div class="container px-0 max-w-full">
       <div class="grid grid-cols-2">
         <HighlightCard
           tag="TOP ECLECTIC Sounds"
